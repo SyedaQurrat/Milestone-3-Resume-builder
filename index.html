@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="icon" href="./image/pic-1.jpg" sizes="48x48" type="image">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Syeda Qurrat Resume Builder</h1>
+            <button onclick="changeColor()">Change Color</button>
+        </header>
+
+        <form id="resumeForm">
+            <h2>Personal Information</h2>
+           
+                <div class="row">
+                    <div class="col-md-6">
+                        <ion-icon name="call-outline"></ion-icon>
+                        <input type="text" placeholder="contact" required>
+                    </div>
+                    <div class="col-md-6">
+                        <ion-icon name="location-outline"></ion-icon>
+                        <input type="text" placeholder="HomeAdress" required>
+                    </div>
+                    <div class="col-md-6">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="col-md-6">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                        <input type="text" placeholder="LinkedIn Profile (optional)">
+                    </div>
+                    <div class="col-md-6">
+                        <ion-icon name="logo-github"></ion-icon>
+                        <input type="text" placeholder="GitHub Profile (optional)">
+                    </div>
+                </div>
+                <section>  
+                    <div class="image-upload">
+                        <input type="file" id="fileInput" accept="image/*" />
+                        <div id="imagePreview" class="image-preview">
+                            <label for="fileInput" class="custom-file-upload">
+                                Upload Picture
+                            </label>
+                        </div>
+                    </div>
+                </section>
+
+             <!-- Objective -->
+            <section>
+                <h2>Objective</h2>
+                <textarea placeholder="Write your career objective..."></textarea>
+            </section>
+
+            <!-- Education -->
+            <section>
+                <h2>Education</h2>
+                <input type="text" placeholder="Degree/Qualification" required>
+                <input type="text" placeholder="University/College Name" required>
+                <input type="text" placeholder="Passing Year" required>
+
+            <!-- Work Experience -->
+                <h2>Work Experience</h2>
+                <input type="text" placeholder="Job Title" required>
+                <input type="text" placeholder="Company Name" required>
+                    <div class="date-container">
+                        <div class="date-start">
+                            <label for="startDate">Start Date:</label>
+                            <div class="date-selectors">
+                                <select id="dayEnd" class="form-control" required>
+                                    <option value="" disabled selected>DD</option>
+                                </select>
+                                <select id="monthEnd" class="form-control" required>
+                                    <option value="" disabled selected>MM</option>
+                                    <option value="1">January</option>
+                                    <option value="2">February</option>
+                                    <option value="3">March</option>
+                                    <option value="4">April</option>
+                                    <option value="5">May</option>
+                                    <option value="6">June</option>
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                    <option value="9">September</option>
+                                    <option value="10">October</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+                                </select>
+                                <select id="yearEnd" class="form-control" required>
+                                    <option value="" disabled selected>YY</option>
+                                </select>
+                            </div>
+                        </div>
+                
+                        <div class="date-start">
+                            <label for="startDate">End Date:</label>
+                            <div class="date-selectors">
+                                <select id="dayStart" class="form-control" required>
+                                    <option value="" disabled selected>DD</option>
+                                </select>
+                                <select id="monthStart" class="form-control" required>
+                                    <option value="" disabled selected>MM</option>
+                                    <option value="1">January</option>
+                                    <option value="2">February</option>
+                                    <option value="3">March</option>
+                                    <option value="4">April</option>
+                                    <option value="5">May</option>
+                                    <option value="6">June</option>
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                    <option value="9">September</option>
+                                    <option value="10">October</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+                                </select>
+                                <select id="yearStart" class="form-control" required>
+                                    <option value="" disabled selected>YY</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                <textarea placeholder="Job Responsibilities..."></textarea>
+            </section>
+
+            <!-- Skills -->
+            <section>
+                <h2>Skills</h2>
+                <input type="text" placeholder="Technical Skills" required>
+                <input type="text" placeholder="Soft Skills" required>
+            </section>
+
+            <!-- Projects -->
+            <section>
+                <h2>Projects</h2>
+                <input type="text" placeholder="Project Title" required>
+                <textarea placeholder="Project Description..."></textarea>
+                <input type="text" placeholder="Technologies Used" required>
+            </section>
+
+            <!-- Certifications -->
+            <section>
+                <h2>Certifications & Courses</h2>
+                <input type="text" placeholder="Course Title">
+                <input type="text" placeholder="Institution Name">
+                <input type="text" placeholder="Completion Date">
+            </section>
+
+            <!-- Languages -->
+            <section>
+                <h2>Languages</h2>
+                <input type="text" placeholder="Language">
+            </section>
+
+            <!-- Hobbies -->
+            <section>
+                <h2>Hobbies & Interests</h2>
+                <textarea placeholder="Your hobbies..."></textarea>
+            </section>
+
+            <!-- References -->
+            <section>
+                <h2>References</h2>
+                <input type="text" placeholder="Reference Name">
+                <input type="text" placeholder="Job Title">
+                <input type="text" placeholder="Contact Information">
+            </section>
+
+            <button type="submit">Generate Resume</button>
+
+
+
+            <!-- <div id="resumeContainer" class="resume-container">
+                <h1>Generated Resume</h1>
+                <p>Name: John Doe</p>
+                <p>Email: john.doe@example.com</p>
+                <!-- More resume content here -->
+                <div class="resume-buttons">
+                    <button id="editResume">Edit</button>
+                    <button id="deleteResume">Delete</button>
+                    <button id="downloadPdf">Download PDF</button>
+                </div>
+            </div> -->
+
+
+
+        </form>
+        <div id="resumeOutput" style="display:none;">
+            <h2>Your Resume</h2>
+            <div id="resumeContent"></div>
+            <button onclick="editResume()">Edit</button>
+            <button onclick="deleteResume()">Delete</button>
+            <button onclick="saveAsPDF()">Save as PDF</button>
+        </div>
+
+    </div>
+    <script src="resume.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
